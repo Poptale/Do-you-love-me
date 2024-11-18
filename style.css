@@ -81,6 +81,7 @@ body{
     position: relative;
     border: 5px solid black;
     z-index: 100;
+    padding-bottom: 70px;
 }
 
 @property --angle{
@@ -105,6 +106,11 @@ img{
     border-radius: 50%;
     border: 5px solid black;
     z-index: 10;
+}
+.thin{
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 50%;
 }
 .bgc{
     height: 100%;
@@ -146,7 +152,7 @@ button{
     z-index: 10;
 }
 button:nth-child(1){
-    margin-left: -200px;
+    margin-left: -210px;
 }
 button:hover{
     background-color: rgb(255, 0, 0);
