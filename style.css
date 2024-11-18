@@ -1,0 +1,154 @@
+*{
+    cursor: none;
+}*::selection{
+    background-color: #f00;
+    color: black;
+}
+body{
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+.dot, .block, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15, .block16, .block17, .block18, .block19, .block20, .block21, .block22, .block23, .block24, .block25, .block26, .block27, .block28, .block29, .block30, .block31, .block32, .block33, .block34, .block35, .block36, .block37, .block38, .block39, .block40, .block41, .block42, .block43, .block44, .block45, .block46, .block47, .block48, .block49, .block50{
+    border-radius: 50%;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+}
+.dot{
+    width: 20px;
+    height: 20px;
+    background-color: #f00;
+    z-index: 100000;
+    box-shadow: none;
+}
+.block, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15, .block16, .block17, .block18, .block19, .block20, .block21, .block22, .block23, .block24, .block25, .block26, .block27, .block28, .block29, .block30, .block31, .block32, .block33, .block34, .block35, .block36, .block37, .block38, .block39, .block40, .block41, .block42, .block43, .block44, .block45, .block46, .block47, .block48, .block49, .block50{
+    height: 20px;
+    width: 20px;
+    background-color: #ff0000;
+    opacity: 0.2;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #171717;
+    z-index: 10;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #000;
+    position: relative;
+    border: 5px solid black;
+    z-index: 10;
+}
+.main::after, .main::before{
+    border-radius: 15px;
+    --angle: 0deg;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 1;
+    padding: 15px;
+    background: conic-gradient(from var(--angle), transparent 5%, #f00);
+    animation: anime 2s linear infinite;
+}
+.main2{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #000;
+    position: relative;
+    border: 5px solid black;
+    z-index: 100;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes anime {
+    0%{
+        --angle: 0deg;
+    }
+     100%{
+        --angle: 360deg;
+    } 
+}
+.main::before{
+    filter: blur(20px);
+}
+img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid black;
+    z-index: 10;
+}
+.bgc{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    object-fit: center;
+    position: absolute;
+}
+h1{
+    font-size: 50px;
+    font-family: "permanent marker", cursive;
+    color: rgb(255, 0, 0);
+    z-index: 10;
+}
+.question-container{
+    z-index: 10;
+}
+.image-container{
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid red;
+}
+button{
+    height: 50px;
+    width: 200px;
+    font-family: "permanent marker", cursive;
+    font-size: 20px;
+    background-color: #000;
+    color: rgb(255, 0, 0);
+    border: 3px solid rgb(255, 0, 0);
+    border-radius: 20px;
+    font-weight: 800;
+    transition: 0.1s ease-in-out;
+    position: absolute;
+    z-index: 10;
+}
+button:nth-child(1){
+    margin-left: -200px;
+}
+button:hover{
+    background-color: rgb(255, 0, 0);
+    color: black;
+}
