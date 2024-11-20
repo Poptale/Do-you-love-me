@@ -129,3 +129,9 @@ noBtn.addEventListener("click", ()=>{
 yesBtn.addEventListener("click", ()=>{
     question.innerHTML = "❤️(; I love you too :)❤️";
 })
+yesBtn.addEventListener("mouseover", ()=>{
+    dot.classList.add("dot2");
+})
+yesBtn.addEventListener("mouseleave", ()=>{
+    dot.classList.remove("dot2");
+})
